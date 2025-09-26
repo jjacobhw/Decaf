@@ -16,7 +16,7 @@ function Navbar() {
               <Brain className="w-5 h-5 text-white dark:text-gray-900" />
             </div>
             <span className="text-xl font-semibold text-gray-900 dark:text-white">
-              Decaffinated
+              Decaf
             </span>
           </div>
 

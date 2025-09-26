@@ -10,8 +10,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Decaffinated",
-  description: "Decaffinated",
+  title: "Decaf",
+  description: "Decaf",
 };
 
 export default function RootLayout({
