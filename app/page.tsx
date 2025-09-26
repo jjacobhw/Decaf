@@ -2,7 +2,7 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
-import { Brain, Clock, Moon, TrendingUp, ArrowRight, Play } from 'lucide-react';
+import { Brain, Clock, Moon, TrendingUp, ArrowRight, Play, ChevronDown } from 'lucide-react';
 import Navbar from './components/navbar';
 import Footer from './components/footer';
 
@@ -12,6 +12,13 @@ export default function DecafLanding() {
   useEffect(() => {
     setIsVisible(true);
   }, []);
+
+  const scrollToFeatures = () => {
+    const featuresSection = document.getElementById('features-section');
+    if (featuresSection) {
+      featuresSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   const features = [
     { 
@@ -67,8 +74,7 @@ export default function DecafLanding() {
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed">
-            Decaf is an AI study aid that provides everything you need to cram for your next exam. No more skimming over lecture notes, watching
-            lectures at incomprehensible speeds, or worring about questions you forgot to study.
+            Decaf is an AI-powered study aid that provides everything you need to effectively cram for your next exam.
           </p>
 
           {/* CTA Buttons */}
@@ -84,8 +90,14 @@ export default function DecafLanding() {
           </div>
 
           {/* Social Proof */}
-          <div className="text-center text-gray-500 dark:text-gray-500 text-sm mb-8">
-            Why Decaf?
+          <div className="text-center text-gray-500 dark:text-gray-400 text-sm mb-8">
+            <button 
+              onClick={scrollToFeatures}
+              className="group hover:text-gray-700 dark:hover:text-gray-300 transition-all duration-300 cursor-pointer flex items-center justify-center space-x-2 mx-auto"
+            >
+              <span className="font-medium">Why Decaf?</span>
+              <ChevronDown className="w-4 h-4 group-hover:font-bold group-hover:scale-125 transition-all duration-300" />
+            </button>
           </div>
           
           {/* Mock Screenshot */}
@@ -125,17 +137,17 @@ export default function DecafLanding() {
             </div>
           </div>
         </div>
-      </section>s
+      </section>
 
       {/* Features Section */}
-      <section className="py-20 bg-gray-50 dark:bg-gray-800">
+      <section id="features-section" className="py-20 bg-gray-50 dark:bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
               You don't always know what you need to study 
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-              When every minute counts, taking too long to gather study material can cost you an entire letter grade - allow Decaf to do it for you.
+              When every minute counts, taking too long to gather study material can cost you an entire letter grade - allow Decaf to handle that for you.
             </p>
           </div>
           
