@@ -81,7 +81,7 @@ export default function DecafLanding() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
             <button className="group bg-gray-900 dark:bg-white hover:bg-gray-800 dark:hover:bg-gray-100 text-white dark:text-gray-900 px-8 py-4 rounded-md font-semibold text-lg transition-all duration-200 flex items-center space-x-2">
               <span>Get Decaf free</span>
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
             </button>
             <button className="group bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 text-gray-900 dark:text-white px-8 py-4 rounded-md font-semibold text-lg transition-all duration-200 border border-gray-300 dark:border-gray-600 flex items-center space-x-2">
               <Play className="w-5 h-5" />
@@ -90,12 +90,12 @@ export default function DecafLanding() {
           </div>
 
           {/* Social Proof */}
-          <div className="text-center text-gray-500 dark:text-gray-400 text-sm mb-8">
+          <div className="text-center text-gray-500 dark:text-gray-400 text-sm mb-10">
             <button 
               onClick={scrollToFeatures}
-              className="group hover:text-gray-700 dark:hover:text-gray-300 transition-all duration-300 cursor-pointer flex items-center justify-center space-x-2 mx-auto"
+              className="group hover:text-black dark:hover:text-gray-300 transition-all duration-300 cursor-pointer flex items-center justify-center space-x-2 mx-auto"
             >
-              <span className="font-medium">Why Decaf?</span>
+              <span className="font-large">Why Decaf?</span>
               <ChevronDown className="w-4 h-4 group-hover:font-bold group-hover:scale-125 transition-all duration-300" />
             </button>
           </div>
@@ -140,7 +140,7 @@ export default function DecafLanding() {
       </section>
 
       {/* Features Section */}
-      <section id="features-section" className="py-20 bg-gray-50 dark:bg-gray-800">
+      <section id="features-section" className="py-22 bg-gray-50 dark:bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
@@ -193,15 +193,15 @@ export default function DecafLanding() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gray-900 dark:bg-gray-800">
+      <section className="py-20 bg-gray-100 dark:bg-gray-800">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold text-white mb-4">
+          <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
             Ready to transform your study habits?
           </h2>
-          <p className="text-xl text-gray-300 mb-8">
+          <p className="text-xl text-gray-700 dark:text-gray-300 mb-8">
             Join thousands of students who've already made the switch to sustainable learning.
           </p>
-          <button className="bg-white hover:bg-gray-100 text-gray-900 px-8 py-4 rounded-md font-semibold text-lg transition-colors">
+          <button className="bg-gray-900 hover:bg-gray-800 dark:bg-white dark:hover:bg-gray-100 text-white dark:text-gray-900 px-8 py-4 rounded-md font-semibold text-lg transition-colors">
             Get started for free
           </button>
         </div>
