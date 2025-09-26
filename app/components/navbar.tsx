@@ -1,8 +1,6 @@
 // components/navbar.tsx
 "use client";
 
-import React from 'react';
-import { Brain } from 'lucide-react';
 import ThemeToggle from './themetoggle';
 
 function Navbar() {
@@ -12,9 +10,6 @@ function Navbar() {
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gray-900 dark:bg-white rounded-lg flex items-center justify-center">
-              <Brain className="w-5 h-5 text-white dark:text-gray-900" />
-            </div>
             <span className="text-xl font-semibold text-gray-900 dark:text-white">
               Decaf
             </span>
@@ -43,11 +38,8 @@ function Navbar() {
             
             {/* Desktop CTA Buttons */}
             <div className="hidden md:flex items-center space-x-4">
-              <button className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors font-medium px-4 py-2">
-                Log in
-              </button>
               <button className="bg-gray-900 dark:bg-white hover:bg-gray-800 dark:hover:bg-gray-100 text-white dark:text-gray-900 px-4 py-2 rounded-md font-medium transition-colors">
-                Get Decaffinated free
+                Log In
               </button>
             </div>
           </div>

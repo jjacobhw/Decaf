@@ -63,12 +63,12 @@ export default function DecafLanding() {
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="text-center max-w-4xl mx-auto">
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
-            Study smarter,{' '}
-            <span className="text-gray-600 dark:text-gray-400">not harder</span>
+            It's Time To Ditch The Caffeine & All-Nighters
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed">
-            Break free from all-nighters and energy drinks. Our AI helps you master any subject while maintaining healthy sleep patterns and sustainable study habits.
+            Decaf is an AI study aid that provides everything you need to cram for your next exam. No more skimming over lecture notes, watching
+            lectures at incomprehensible speeds, or worring about questions you forgot to study.
           </p>
 
           {/* CTA Buttons */}
@@ -85,7 +85,7 @@ export default function DecafLanding() {
 
           {/* Social Proof */}
           <div className="text-center text-gray-500 dark:text-gray-500 text-sm mb-8">
-            Trusted by 50,000+ students worldwide
+            Why Decaf?
           </div>
           
           {/* Mock Screenshot */}
@@ -125,17 +125,17 @@ export default function DecafLanding() {
             </div>
           </div>
         </div>
-      </section>
+      </section>s
 
       {/* Features Section */}
       <section className="py-20 bg-gray-50 dark:bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-              Everything you need to study effectively
+              You don't always know what you need to study 
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-              Designed specifically for students who want to excel without sacrificing their health or well-being.
+              When every minute counts, taking too long to gather study material can cost you an entire letter grade - allow Decaf to do it for you.
             </p>
           </div>
           
