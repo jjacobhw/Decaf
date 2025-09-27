@@ -1,9 +1,20 @@
-// components/navbar.tsx
 "use client";
 
+import { useState } from 'react';
 import ThemeToggle from './themetoggle';
+import { X, Menu } from 'lucide-react';
 
 function Navbar() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -33,23 +44,80 @@ function Navbar() {
 
           {/* CTA Buttons and Theme Toggle */}
           <div className="flex items-center space-x-4">
-            {/* Theme Toggle */}
-            <ThemeToggle />
-            
-            {/* Desktop CTA Buttons */}
+            {/* Desktop CTA Buttons and Theme Toggle */}
             <div className="hidden md:flex items-center space-x-4">
+              {/* Theme Toggle - Now positioned to the left of Login button */}
+              <ThemeToggle />
+              
+              {/* Login Button */}
               <button className="bg-gray-900 dark:bg-white hover:bg-gray-800 dark:hover:bg-gray-100 text-white dark:text-gray-900 px-4 py-2 rounded-md font-medium transition-colors">
                 Log In
               </button>
             </div>
-          </div>
 
-          {/* Mobile Menu Button */}
-          <button className="md:hidden text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white">
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          </button>
+            {/* Mobile: Theme Toggle and Menu Button */}
+            <div className="md:hidden flex items-center space-x-3">
+              {/* Theme Toggle - Now to the left of hamburger menu */}
+              <ThemeToggle />
+              
+              {/* Mobile Menu Button */}
+              <button 
+                className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white"
+                onClick={toggleMenu}
+                aria-label="Toggle menu"
+              >
+                {isMenuOpen ? (
+                  <X className="w-6 h-6" />
+                ) : (
+                  <Menu className="w-6 h-6" />
+                )}
+              </button>
+            </div>
+          </div>
+        </div>
+
+        {/* Mobile Menu with Animation */}
+        <div className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
+          <div className="px-2 pt-2 pb-3 space-y-1 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-t border-gray-200 dark:border-gray-800">
+            <a 
+              href="#product" 
+              className="block px-3 py-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors font-medium"
+              onClick={closeMenu}
+            >
+              Product
+            </a>
+            <a 
+              href="#solutions" 
+              className="block px-3 py-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors font-medium"
+              onClick={closeMenu}
+            >
+              Solutions
+            </a>
+            <a 
+              href="#pricing" 
+              className="block px-3 py-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors font-medium"
+              onClick={closeMenu}
+            >
+              Pricing
+            </a>
+            <a 
+              href="#resources" 
+              className="block px-3 py-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors font-medium"
+              onClick={closeMenu}
+            >
+              Resources
+            </a>
+            
+            {/* Mobile CTA Button */}
+            <div className="pt-4 pb-2">
+              <button 
+                className="w-full bg-gray-900 dark:bg-white hover:bg-gray-800 dark:hover:bg-gray-100 text-white dark:text-gray-900 px-4 py-2 rounded-md font-medium transition-colors"
+                onClick={closeMenu}
+              >
+                Log In
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </nav>
