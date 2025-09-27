@@ -111,7 +111,7 @@ export default function DecafLanding() {
     { 
       icon: TrendingUp, 
       title: "Progress Without Burnout", 
-      desc: "Analytics show your predicted exam score and overall improvement. No need to worry about achieving the minimum passing score." 
+      desc: "Analytics show your predicted exam score and overall improvement. No need to worry about achieving the minimum passing grade." 
     }
   ];
 
@@ -157,7 +157,7 @@ export default function DecafLanding() {
             variants={fadeInUpVariants}
             className="text-xl md:text-2xl text-gray-600 dark:text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed"
           >
-            Decaf is an AI-powered study aid that provides everything you need to effectively cram for your next exam.
+            Decaf is aj AI-powered study aid that provides everything you need to effectively cram for your next exam.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -171,7 +171,7 @@ export default function DecafLanding() {
             </button>
             <button className="group bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 text-gray-900 dark:text-white px-8 py-4 rounded-md font-semibold text-lg transition-all duration-200 border border-gray-300 dark:border-gray-600 flex items-center space-x-2">
               <Play className="w-5 h-5" />
-              <span>See How Decaf Works</span>
+              <span>See How It Works</span>
             </button>
           </motion.div>
 
