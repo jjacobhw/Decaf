@@ -9,7 +9,6 @@ import Footer from './components/footer';
 export default function DecafLanding() {
   const [isVisible, setIsVisible] = useState(false);
 
-  // Refs for scroll-triggered animations
   const featuresRef = React.useRef(null);
   const testimonialsRef = React.useRef(null);
   const ctaRef = React.useRef(null);
@@ -96,23 +95,23 @@ export default function DecafLanding() {
   const features = [
     { 
       icon: Brain, 
-      title: "AI-powered study plans", 
-      desc: "Personalized learning schedules that adapt to your natural rhythms and optimize retention without the crash." 
+      title: "Personalized Study Plans", 
+      desc: "Tailors study materials towards questions most likely to appear on your upcoming exam. No need to skim the lecture slides for that niece solution." 
     },
     { 
       icon: Moon, 
-      title: "Sleep-first approach", 
-      desc: "Built-in sleep tracking and smart reminders help you maintain healthy study habits that actually stick." 
+      title: "Prioritizes Sleep & Wellness", 
+      desc: "Cramming is inefficient if you can't focus, Decaf works around your schedule to include sufficient sleep intervals." 
     },
     { 
       icon: Clock, 
-      title: "Efficient learning sessions", 
-      desc: "Science-backed intervals and breaks that maximize focus without relying on stimulants." 
+      title: "Efficient Learning Techniques", 
+      desc: "Decaf uses science-backed methods (active recall, interleaving, spaced repetition, etc) to maximize study time. Learn so fast it feels like cheating." 
     },
     { 
       icon: TrendingUp, 
-      title: "Progress without burnout", 
-      desc: "Visual analytics show your improvement while protecting your mental and physical wellbeing." 
+      title: "Progress Without Burnout", 
+      desc: "Analytics show your predicted exam score and overall improvement. No need to worry about achieving the minimum passing score." 
     }
   ];
 
@@ -245,7 +244,7 @@ export default function DecafLanding() {
               You sometimes don't know what to study until it's too late.
             </motion.h2>
             <motion.p variants={staggerItem} className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-              When every minute counts, taking too long to gather study material can cost you an entire letter grade - allow Decaf to handle that for you.
+              When every minute counts, any sub-optimal study method can cost you an entire letter grade - allow Decaf to solve that for you.
             </motion.p>
           </motion.div>
           
