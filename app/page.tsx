@@ -8,11 +8,9 @@ import Footer from './components/footer';
 
 export default function DecafLanding() {
   const [isVisible, setIsVisible] = useState(false);
-
   const featuresRef = React.useRef(null);
   const testimonialsRef = React.useRef(null);
   const ctaRef = React.useRef(null);
-  
   const isFeaturesInView = useInView(featuresRef, { once: true, amount: 0.3 });
   const isTestimonialsInView = useInView(testimonialsRef, { once: true, amount: 0.3 });
   const isCtaInView = useInView(ctaRef, { once: true, amount: 0.5 });
@@ -157,7 +155,7 @@ export default function DecafLanding() {
             variants={fadeInUpVariants}
             className="text-xl md:text-2xl text-gray-600 dark:text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed"
           >
-            Decaf is aj AI-powered study aid that provides everything you need to effectively cram for your next exam.
+            Decaf is an AI study aid that provides everything you need to effectively cram for your next exam.
           </motion.p>
 
           {/* CTA Buttons */}
