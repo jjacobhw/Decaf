@@ -2,12 +2,18 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #24292f;
 }
 
 .dark {
-  --background: #0a0a0a;
-  --foreground: #ededed;
+  /* GitHub dark mode color palette */
+  --background: #0d1117;
+  --foreground: #f0f6fc;
+  --secondary-bg: #161b22;
+  --tertiary-bg: #21262d;
+  --border-color: #30363d;
+  --muted-text: #8b949e;
+  --accent-text: #58a6ff;
 }
 
 @theme inline {

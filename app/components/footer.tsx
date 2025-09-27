@@ -4,49 +4,49 @@ import { Brain } from 'lucide-react';
 
 function Footer() {
   return (
-    <footer className="bg-gray-50 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800">
+    <footer className="bg-gray-50 dark:bg-[#161b22] border-t border-gray-200 dark:border-[#30363d]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
           <div className="col-span-2">
             <div className="flex items-center space-x-2 mb-4">
-              <span className="text-xl font-semibold text-gray-900 dark:text-white">Decaf</span>
+              <span className="text-xl font-semibold text-gray-900 dark:text-[#f0f6fc]">Decaf</span>
             </div>
           </div>
           
           <div>
-            <h4 className="font-semibold text-gray-900 dark:text-white mb-4">Product</h4>
-            <ul className="space-y-3 text-sm text-gray-600 dark:text-gray-400">
-              <li><a href="#" className="hover:text-gray-900 dark:hover:text-white">AI Study Plans</a></li>
-              <li><a href="#" className="hover:text-gray-900 dark:hover:text-white">Sleep Tracking</a></li>
-              <li><a href="#" className="hover:text-gray-900 dark:hover:text-white">Progress Analytics</a></li>
+            <h4 className="font-semibold text-gray-900 dark:text-[#f0f6fc] mb-4">Product</h4>
+            <ul className="space-y-3 text-sm text-gray-600 dark:text-[#8b949e]">
+              <li><a href="#" className="hover:text-gray-900 dark:hover:text-[#f0f6fc] transition-colors">AI Study Plans</a></li>
+              <li><a href="#" className="hover:text-gray-900 dark:hover:text-[#f0f6fc] transition-colors">Sleep Tracking</a></li>
+              <li><a href="#" className="hover:text-gray-900 dark:hover:text-[#f0f6fc] transition-colors">Progress Analytics</a></li>
             </ul>
           </div>
           
           <div>
-            <h4 className="font-semibold text-gray-900 dark:text-white mb-4">Resources</h4>
-            <ul className="space-y-3 text-sm text-gray-600 dark:text-gray-400">
-              <li><a href="#" className="hover:text-gray-900 dark:hover:text-white">Help Center</a></li>
-              <li><a href="#" className="hover:text-gray-900 dark:hover:text-white">Study Guide</a></li>
-              <li><a href="#" className="hover:text-gray-900 dark:hover:text-white">Blog</a></li>
+            <h4 className="font-semibold text-gray-900 dark:text-[#f0f6fc] mb-4">Resources</h4>
+            <ul className="space-y-3 text-sm text-gray-600 dark:text-[#8b949e]">
+              <li><a href="#" className="hover:text-gray-900 dark:hover:text-[#f0f6fc] transition-colors">Help Center</a></li>
+              <li><a href="#" className="hover:text-gray-900 dark:hover:text-[#f0f6fc] transition-colors">Study Guide</a></li>
+              <li><a href="#" className="hover:text-gray-900 dark:hover:text-[#f0f6fc] transition-colors">Blog</a></li>
             </ul>
           </div>
           
           <div>
-            <h4 className="font-semibold text-gray-900 dark:text-white mb-4">Company</h4>
-            <ul className="space-y-3 text-sm text-gray-600 dark:text-gray-400">
-              <li><a href="#" className="hover:text-gray-900 dark:hover:text-white">About</a></li>
-              <li><a href="#" className="hover:text-gray-900 dark:hover:text-white">Careers</a></li>
-              <li><a href="#" className="hover:text-gray-900 dark:hover:text-white">Contact</a></li>
+            <h4 className="font-semibold text-gray-900 dark:text-[#f0f6fc] mb-4">Company</h4>
+            <ul className="space-y-3 text-sm text-gray-600 dark:text-[#8b949e]">
+              <li><a href="#" className="hover:text-gray-900 dark:hover:text-[#f0f6fc] transition-colors">About</a></li>
+              <li><a href="#" className="hover:text-gray-900 dark:hover:text-[#f0f6fc] transition-colors">Careers</a></li>
+              <li><a href="#" className="hover:text-gray-900 dark:hover:text-[#f0f6fc] transition-colors">Contact</a></li>
             </ul>
           </div>
         </div>
         
-        <div className="mt-12 pt-8 border-t border-gray-200 dark:border-gray-800 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-500 dark:text-gray-500 text-sm">© 2025 Decaf. All rights reserved.</p>
+        <div className="mt-12 pt-8 border-t border-gray-200 dark:border-[#30363d] flex flex-col md:flex-row justify-between items-center">
+          <p className="text-gray-500 dark:text-[#8b949e] text-sm">© 2025 Decaf. All rights reserved.</p>
           <div className="mt-4 md:mt-0 flex space-x-2">
             <a 
               href="https://github.com/jjacobhw/Decaf" 
-              className="inline-flex items-center p-2 text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white transition-colors border border-transparent hover:border-gray-300 dark:hover:border-gray-600 rounded-lg"
+              className="inline-flex items-center p-2 text-gray-600 hover:text-black dark:text-[#8b949e] dark:hover:text-[#f0f6fc] transition-colors border border-transparent hover:border-gray-300 dark:hover:border-[#30363d] rounded-lg"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -56,7 +56,7 @@ function Footer() {
             </a>
             <a 
               href="https://linkedin.com/in/jjacobhw" 
-              className="inline-flex items-center p-2 text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors border border-transparent hover:border-gray-300 dark:hover:border-gray-600 rounded-lg"
+              className="inline-flex items-center p-2 text-gray-600 hover:text-blue-600 dark:text-[#8b949e] dark:hover:text-[#58a6ff] transition-colors border border-transparent hover:border-gray-300 dark:hover:border-[#30363d] rounded-lg"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -71,4 +71,4 @@ function Footer() {
   );
 }
 
-export default Footer;
+export default Footer

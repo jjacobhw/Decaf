@@ -16,28 +16,28 @@ function Navbar() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-[#0d1117]/95 backdrop-blur-md border-b border-gray-200 dark:border-[#30363d]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <span className="text-xl font-semibold text-gray-900 dark:text-white">
+            <span className="text-xl font-semibold text-gray-900 dark:text-[#f0f6fc]">
               Decaf
             </span>
           </div>
 
           {/* Desktop Navigation Links */}
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#documentation" className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors font-medium">
+            <a href="#documentation" className="text-gray-600 dark:text-[#8b949e] hover:text-gray-900 dark:hover:text-[#f0f6fc] transition-colors font-medium">
               Documentation
             </a>
-            <a href="#solutions" className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors font-medium">
+            <a href="#solutions" className="text-gray-600 dark:text-[#8b949e] hover:text-gray-900 dark:hover:text-[#f0f6fc] transition-colors font-medium">
               Solutions
             </a>
-            <a href="#pricing" className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors font-medium">
+            <a href="#pricing" className="text-gray-600 dark:text-[#8b949e] hover:text-gray-900 dark:hover:text-[#f0f6fc] transition-colors font-medium">
               Pricing
             </a>
-            <a href="#resources" className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors font-medium">
+            <a href="#resources" className="text-gray-600 dark:text-[#8b949e] hover:text-gray-900 dark:hover:text-[#f0f6fc] transition-colors font-medium">
               Resources
             </a>
           </div>
@@ -62,7 +62,7 @@ function Navbar() {
               
               {/* Mobile Menu Button */}
               <button 
-                className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white"
+                className="text-gray-600 dark:text-[#8b949e] hover:text-gray-900 dark:hover:text-[#f0f6fc]"
                 onClick={toggleMenu}
                 aria-label="Toggle menu"
               >
@@ -78,31 +78,31 @@ function Navbar() {
 
         {/* Mobile Menu with Animation */}
         <div className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
-          <div className="px-2 pt-2 pb-3 space-y-1 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-t border-gray-200 dark:border-gray-800">
+          <div className="px-2 pt-2 pb-3 space-y-1 bg-white/80 dark:bg-[#0d1117]/95 backdrop-blur-md border-t border-gray-200 dark:border-[#30363d]">
             <a 
               href="#documentation" 
-              className="block px-3 py-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors font-medium"
+              className="block px-3 py-2 text-gray-600 dark:text-[#8b949e] hover:text-gray-900 dark:hover:text-[#f0f6fc] transition-colors font-medium"
               onClick={closeMenu}
             >
               Documentation
             </a>
             <a 
               href="#solutions" 
-              className="block px-3 py-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors font-medium"
+              className="block px-3 py-2 text-gray-600 dark:text-[#8b949e] hover:text-gray-900 dark:hover:text-[#f0f6fc] transition-colors font-medium"
               onClick={closeMenu}
             >
               Solutions
             </a>
             <a 
               href="#pricing" 
-              className="block px-3 py-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors font-medium"
+              className="block px-3 py-2 text-gray-600 dark:text-[#8b949e] hover:text-gray-900 dark:hover:text-[#f0f6fc] transition-colors font-medium"
               onClick={closeMenu}
             >
               Pricing
             </a>
             <a 
               href="#resources" 
-              className="block px-3 py-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors font-medium"
+              className="block px-3 py-2 text-gray-600 dark:text-[#8b949e] hover:text-gray-900 dark:hover:text-[#f0f6fc] transition-colors font-medium"
               onClick={closeMenu}
             >
               Resources
@@ -111,7 +111,7 @@ function Navbar() {
             {/* Mobile CTA Button */}
             <div className="pt-4 pb-2">
               <button 
-                className="w-full bg-gray-900 dark:bg-white hover:bg-gray-800 dark:hover:bg-gray-100 text-white dark:text-gray-900 px-4 py-2 rounded-md font-medium transition-colors"
+                className="w-full bg-gray-900 dark:bg-[#238636] hover:bg-gray-800 dark:hover:bg-[#2ea043] text-white dark:text-[#f0f6fc] px-4 py-2 rounded-md font-medium transition-colors"
                 onClick={closeMenu}
               >
                 Log In
