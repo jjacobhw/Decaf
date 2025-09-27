@@ -1,12 +1,22 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
+import { motion, useInView, easeOut, easeIn, easeInOut} from 'framer-motion';
 import { Brain, Clock, Moon, TrendingUp, ArrowRight, Play, ChevronDown } from 'lucide-react';
 import Navbar from './components/navbar';
 import Footer from './components/footer';
 
 export default function DecafLanding() {
   const [isVisible, setIsVisible] = useState(false);
+
+  // Refs for scroll-triggered animations
+  const featuresRef = React.useRef(null);
+  const testimonialsRef = React.useRef(null);
+  const ctaRef = React.useRef(null);
+  
+  const isFeaturesInView = useInView(featuresRef, { once: true, amount: 0.3 });
+  const isTestimonialsInView = useInView(testimonialsRef, { once: true, amount: 0.3 });
+  const isCtaInView = useInView(ctaRef, { once: true, amount: 0.5 });
 
   useEffect(() => {
     setIsVisible(true);
@@ -16,6 +26,70 @@ export default function DecafLanding() {
     const featuresSection = document.getElementById('features-section');
     if (featuresSection) {
       featuresSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  // Framer Motion variants using CSS keyframes
+  const fadeInUpVariants = {
+    hidden: { 
+      opacity: 0,
+      y: 30
+    },
+    visible: { 
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
+        ease: easeOut
+      }
+    }
+  };
+
+  const fadeInVariants = {
+    hidden: { opacity: 0 },
+    visible: { 
+      opacity: 1,
+      transition: {
+        duration: 0.8,
+        ease: easeOut
+      }
+    }
+  };
+
+  const slideUpVariants = {
+    hidden: { 
+      opacity: 0,
+      y: 50
+    },
+    visible: { 
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
+        ease: easeOut
+      }
+    }
+  };
+
+  const staggerContainer = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2
+      }
+    }
+  };
+
+  const staggerItem = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: easeOut
+      }
     }
   };
 
@@ -66,30 +140,47 @@ export default function DecafLanding() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <motion.section 
+        initial="hidden"
+        animate="visible"
+        variants={fadeInVariants}
+        className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto"
+      >
         <div className="text-center max-w-4xl mx-auto">
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
+          <motion.h1 
+            variants={fadeInUpVariants}
+            className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white mb-6 leading-tight"
+          >
             It's Time To Ditch The Caffeine & All-Nighters
-          </h1>
+          </motion.h1>
           
-          <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed">
+          <motion.p 
+            variants={fadeInUpVariants}
+            className="text-xl md:text-2xl text-gray-600 dark:text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed"
+          >
             Decaf is an AI-powered study aid that provides everything you need to effectively cram for your next exam.
-          </p>
+          </motion.p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
+          <motion.div 
+            variants={fadeInUpVariants}
+            className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"
+          >
             <button className="group bg-gray-900 dark:bg-white hover:bg-gray-800 dark:hover:bg-gray-100 text-white dark:text-gray-900 px-8 py-4 rounded-md font-semibold text-lg transition-all duration-200 flex items-center space-x-2">
               <span>Get Decaf Free</span>
               <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
             </button>
             <button className="group bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 text-gray-900 dark:text-white px-8 py-4 rounded-md font-semibold text-lg transition-all duration-200 border border-gray-300 dark:border-gray-600 flex items-center space-x-2">
               <Play className="w-5 h-5" />
-              <span>See How It Works</span>
+              <span>See How Decaf Works</span>
             </button>
-          </div>
+          </motion.div>
 
           {/* Social Proof */}
-          <div className="text-center text-gray-500 dark:text-gray-400 text-sm mb-10">
+          <motion.div 
+            variants={fadeInUpVariants}
+            className="text-center text-gray-500 dark:text-gray-400 text-sm mb-10"
+          >
             <button 
               onClick={scrollToFeatures}
               className="group hover:text-black dark:hover:text-gray-300 transition-all duration-300 cursor-pointer flex items-center justify-center space-x-2 mx-auto"
@@ -97,10 +188,13 @@ export default function DecafLanding() {
               <span className="font-large">Why Decaf?</span>
               <ChevronDown className="w-4 h-4 group-hover:font-bold group-hover:scale-125 transition-all duration-300" />
             </button>
-          </div>
+          </motion.div>
           
           {/* Mock Screenshot */}
-          <div className="relative mx-auto max-w-5xl">
+          <motion.div 
+            variants={fadeInUpVariants}
+            className="relative mx-auto max-w-5xl"
+          >
             <div className="bg-gray-100 dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-8 shadow-2xl">
               <div className="bg-white dark:bg-gray-900 rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden">
                 <div className="bg-gray-50 dark:bg-gray-800 px-4 py-3 border-b border-gray-200 dark:border-gray-700 flex items-center space-x-2">
@@ -134,25 +228,39 @@ export default function DecafLanding() {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Features Section */}
-      <section id="features-section" className="py-22 bg-gray-50 dark:bg-gray-800">
+      <section id="features-section" className="py-22 bg-gray-50 dark:bg-gray-800" ref={featuresRef}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+          <motion.div 
+            initial="hidden"
+            animate={isFeaturesInView ? "visible" : "hidden"}
+            variants={staggerContainer}
+            className="text-center mb-16"
+          >
+            <motion.h2 variants={staggerItem} className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
               You sometimes don't know what to study until it's too late.
-            </h2>
-            <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+            </motion.h2>
+            <motion.p variants={staggerItem} className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
               When every minute counts, taking too long to gather study material can cost you an entire letter grade - allow Decaf to handle that for you.
-            </p>
-          </div>
+            </motion.p>
+          </motion.div>
           
-          <div className="grid md:grid-cols-2 gap-12">
+          <motion.div 
+            initial="hidden"
+            animate={isFeaturesInView ? "visible" : "hidden"}
+            variants={staggerContainer}
+            className="grid md:grid-cols-2 gap-12"
+          >
             {features.map((feature, index) => (
-              <div key={index} className="flex space-x-4">
+              <motion.div 
+                key={index} 
+                variants={staggerItem}
+                className="flex space-x-4"
+              >
                 <div className="flex-shrink-0">
                   <div className="w-12 h-12 bg-gray-900 dark:bg-white rounded-lg flex items-center justify-center">
                     <feature.icon className="w-6 h-6 text-white dark:text-gray-900" />
@@ -162,38 +270,57 @@ export default function DecafLanding() {
                   <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">{feature.title}</h3>
                   <p className="text-gray-600 dark:text-gray-400 leading-relaxed">{feature.desc}</p>
                 </div>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 bg-white dark:bg-gray-900">
+      <section className="py-20 bg-white dark:bg-gray-900" ref={testimonialsRef}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <motion.div 
+            initial="hidden"
+            animate={isTestimonialsInView ? "visible" : "hidden"}
+            variants={fadeInUpVariants}
+            className="text-center mb-16"
+          >
             <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
               Loved by students worldwide
             </h2>
-          </div>
+          </motion.div>
           
-          <div className="grid md:grid-cols-3 gap-8">
+          <motion.div 
+            initial="hidden"
+            animate={isTestimonialsInView ? "visible" : "hidden"}
+            variants={staggerContainer}
+            className="grid md:grid-cols-3 gap-8"
+          >
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-gray-50 dark:bg-gray-800 rounded-xl p-8 border border-gray-200 dark:border-gray-700">
+              <motion.div 
+                key={index} 
+                variants={staggerItem}
+                className="bg-gray-50 dark:bg-gray-800 rounded-xl p-8 border border-gray-200 dark:border-gray-700"
+              >
                 <p className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">"{testimonial.text}"</p>
                 <div>
                   <p className="font-semibold text-gray-900 dark:text-white">{testimonial.author}</p>
                   <p className="text-gray-600 dark:text-gray-400 text-sm">{testimonial.role}</p>
                 </div>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gray-100 dark:bg-gray-800">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="py-20 bg-gray-100 dark:bg-gray-800" ref={ctaRef}>
+        <motion.div 
+          initial="hidden"
+          animate={isCtaInView ? "visible" : "hidden"}
+          variants={slideUpVariants}
+          className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
+        >
           <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
             Ready to transform your study habits?
           </h2>
@@ -203,8 +330,9 @@ export default function DecafLanding() {
           <button className="bg-gray-900 hover:bg-gray-800 dark:bg-white dark:hover:bg-gray-100 text-white dark:text-gray-900 px-8 py-4 rounded-md font-semibold text-lg transition-colors">
             Get started
           </button>
-        </div>
+        </motion.div>
       </section>
+      
       <Footer />
     </div>
   );
