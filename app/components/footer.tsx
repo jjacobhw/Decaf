@@ -41,9 +41,9 @@ function Footer() {
           </div>
         </div>
         
-        <div className="mt-12 pt-8 border-t border-gray-200 dark:border-[#30363d] flex flex-col md:flex-row justify-between items-center">
+        <div className="mt-12 pt-8 border-t border-gray-200 dark:border-[#30363d] flex justify-between items-center">
           <p className="text-gray-500 dark:text-[#8b949e] text-sm">© 2025 Decaf. All rights reserved.</p>
-          <div className="mt-4 md:mt-0 flex space-x-2">
+          <div className="flex space-x-2">
             <a 
               href="https://github.com/jjacobhw/Decaf" 
               className="inline-flex items-center p-2 text-gray-600 hover:text-black dark:text-[#8b949e] dark:hover:text-[#f0f6fc] transition-colors border border-transparent hover:border-gray-300 dark:hover:border-[#30363d] rounded-lg"
