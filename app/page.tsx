@@ -176,7 +176,7 @@ export default function DecafLanding() {
           {/* Social Proof */}
           <motion.div 
             variants={fadeInUpVariants}
-            className="text-center text-gray-500 dark:text-[#8b949e] text-md mb-40"
+            className="text-center text-gray-500 dark:text-[#8b949e] text-md mb-42"
           >
             <button 
               onClick={scrollToFeatures}
