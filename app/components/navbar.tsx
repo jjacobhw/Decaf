@@ -111,7 +111,7 @@ function Navbar() {
             {/* Mobile CTA Button */}
             <div className="pt-4 pb-2">
               <button 
-                className="w-full bg-white dark:bg-white hover:bg-gray-100 dark:hover:bg-gray-100 text-gray-900 dark:text-gray-900 px-4 py-2 rounded-md font-medium transition-colors"
+                className="w-full bg-gray-900 dark:bg-white hover:bg-gray-800 dark:hover:bg-gray-100 text-white dark:text-gray-900 px-4 py-2 rounded-md font-medium transition-colors"
                 onClick={closeMenu}
               >
                 Log In

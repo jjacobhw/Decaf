@@ -7,7 +7,7 @@ function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
           <div className="col-span-2">
             <div className="flex items-center space-x-2 mb-4">
-              <span className="text-xl font-semibold text-gray-900 dark:text-[#f0f6fc]">Decaf</span>
+              <span className="text-2xl font-semibold text-gray-900 dark:text-[#f0f6fc]">Decaf</span>
             </div>
           </div>
           
