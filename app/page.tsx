@@ -322,7 +322,7 @@ export default function DecafLanding() {
             Ready to transform your study habits?
           </h2>
           <p className="text-xl text-gray-700 dark:text-[#e6edf3] mb-8">
-            Join thousands of students who've already made the switch to sustainable learning.
+            Be the reason your instructor doesn't curve the final grade.
           </p>
           <button className="bg-gray-900 hover:bg-gray-800 dark:bg-[#f0f6fc] dark:hover:bg-[#e6edf3] text-white dark:text-[#24292f] px-8 py-4 rounded-md font-semibold text-lg transition-colors">
             Get started
