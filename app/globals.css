@@ -6,7 +6,6 @@
 }
 
 .dark {
-  /* GitHub dark mode color palette */
   --background: #0d1117;
   --foreground: #f0f6fc;
   --secondary-bg: #161b22;
@@ -30,10 +29,8 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Enable dark mode with class strategy */
 @custom-variant dark (&:where(.dark, .dark *));
 
-/* CSS Animation Keyframes - Used by Framer Motion */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -65,7 +62,6 @@ body {
   }
 }
 
-/* CSS Classes for direct usage (optional) */
 .css-fade-in-up {
   animation: fadeInUp 0.8s ease-out forwards;
 }
