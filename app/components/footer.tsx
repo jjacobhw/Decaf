@@ -1,4 +1,3 @@
-// components/footer.tsx
 import React from 'react';
 import { Brain } from 'lucide-react';
 

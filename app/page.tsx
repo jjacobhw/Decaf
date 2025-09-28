@@ -176,13 +176,13 @@ export default function DecafLanding() {
           {/* Social Proof */}
           <motion.div 
             variants={fadeInUpVariants}
-            className="text-center text-gray-500 dark:text-[#8b949e] text-sm mb-10"
+            className="text-center text-gray-500 dark:text-[#8b949e] text-md mb-40"
           >
             <button 
               onClick={scrollToFeatures}
               className="group hover:text-black dark:hover:text-[#f0f6fc] transition-all duration-300 cursor-pointer flex items-center justify-center space-x-2 mx-auto"
             >
-              <span className="font-large">Why Decaf?</span>
+              <span className="font-xl">Why Decaf?</span>
               <ChevronDown className="w-4 h-4 group-hover:font-bold group-hover:scale-125 transition-all duration-300" />
             </button>
           </motion.div>
