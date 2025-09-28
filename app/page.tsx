@@ -1,10 +1,10 @@
 "use client";
-
+import Navbar from './components/navbar';
+import Footer from './components/footer';
 import React, { useState, useEffect } from 'react';
 import { motion, useInView, easeOut, easeIn, easeInOut} from 'framer-motion';
 import { Brain, Clock, Moon, TrendingUp, ArrowRight, Play, ChevronDown } from 'lucide-react';
-import Navbar from './components/navbar';
-import Footer from './components/footer';
+
 
 export default function DecafLanding() {
   const [isVisible, setIsVisible] = useState(false);

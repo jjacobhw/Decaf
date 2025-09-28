@@ -1,5 +1,4 @@
 "use client";
-
 import { useState } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import ThemeToggle from './themetoggle';
