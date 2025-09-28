@@ -133,7 +133,6 @@ export default function DecafLanding() {
 
   return (
     <div className="bg-white dark:bg-[#0d1117]">
-      {/* Navigation */}
       <Navbar />
 
       {/* Hero Section */}
@@ -155,7 +154,7 @@ export default function DecafLanding() {
             variants={fadeInUpVariants}
             className="text-xl md:text-2xl text-gray-600 dark:text-[#8b949e] mb-12 max-w-3xl mx-auto leading-relaxed"
           >
-            Decaf is an AI study aid that provides everything you need to effectively cram for your next exam.
+            Decaf is the AI study aid that provides everything you need to effectively cram for your next exam.
           </motion.p>
 
           {/* CTA Buttons */}
