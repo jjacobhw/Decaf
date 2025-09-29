@@ -238,10 +238,10 @@ export default function DecafLanding() {
             className="text-center mb-16"
           >
             <motion.h2 variants={staggerItem} className="text-4xl font-bold text-gray-900 dark:text-[#f0f6fc] mb-4">
-              You sometimes don't know what to study until it's too late.
+              Studying can be annoying. Finding the right study materials is even more annoying.
             </motion.h2>
             <motion.p variants={staggerItem} className="text-xl text-gray-600 dark:text-[#8b949e] max-w-3xl mx-auto">
-              When every minute counts, any sub-optimal study method can cost you an entire letter grade - allow Decaf to solve that for you.
+              When every second counts, you can't waste any time figuring out what you need to study. Instead, allow Decaf to handle that for you.
             </motion.p>
           </motion.div>
           
